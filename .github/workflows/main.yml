@@ -1,0 +1,16 @@
+# This is a basic workflow to help you get started with Actions
+
+name: npm-downloads-report
+
+on:
+  schedule: 
+    - cron: '0 9 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Call the function
+        run: wget 'https://us-central1-npm-downloads-reporter.cloudfunctions.net/message'
