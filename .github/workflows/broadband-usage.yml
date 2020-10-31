@@ -1,0 +1,17 @@
+name: broadband-usage-report
+
+on:
+  push:
+    branches: 
+      - 'main'
+  schedule: 
+    - cron: '0 18 29 * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Call the function
+        run: wget 'https://us-central1-npm-downloads-reporter.cloudfunctions.net/broadbandUsage'
