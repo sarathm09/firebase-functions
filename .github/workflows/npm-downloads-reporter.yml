@@ -1,9 +1,6 @@
 name: npm-downloads-report
 
 on:
-  push:
-    branches: 
-      - 'main'
   schedule: 
     - cron: '0 5 * * *'
 
@@ -14,4 +11,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Call the function
-        run: wget 'https://us-central1-npm-downloads-reporter.cloudfunctions.net/message'
+        run: wget 'https://us-central1-npm-downloads-reporter.cloudfunctions.net/npmDownloads?message=true'
