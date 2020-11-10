@@ -1,4 +1,4 @@
-name: broadband-usage-report
+name: broadband-usage-report-cron
 
 on:
   schedule: 
