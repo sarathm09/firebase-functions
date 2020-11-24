@@ -2,7 +2,7 @@ name: broadband-usage-report-cron
 
 on:
   schedule: 
-    - cron: "0 H/6 * * *"
+    - cron: "45 5,11,17,23 * * *"
 
 jobs:
   build:
