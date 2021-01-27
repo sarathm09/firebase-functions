@@ -1,8 +1,8 @@
 name: broadband-usage-report
 
 on:
-  schedule: 
-    - cron: '25 18 * * *'
+  schedule:
+    - cron: '*/20 */6 * * *'
 
 jobs:
   build:
